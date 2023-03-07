@@ -1,0 +1,8 @@
+have we done startapp already? I don't think so.
+we have not created a superuser yet.
+
+We have NOT done makemigrations or migrate yet. As of creating resource Model
+
+created resource model; created 3 views, but did not write them; created forms.py and copied over from django-albums;
+
+worked on views functions and html pages with Gerardo in class
