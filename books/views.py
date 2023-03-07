@@ -1,3 +1,13 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def add_resource():
+    pass
+
+
+def edit_resource():
+    pass
+
+
+def delete_resource():
+    pass
