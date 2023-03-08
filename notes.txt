@@ -35,3 +35,6 @@ GOING THROUGH LOGIN TUTORIAL
 https://realpython.com/django-view-authorization/#restricting-views-to-logged-in-users
 --got 'Shh, members only!' to show up
 --finished up to 'Restricting Views to Admin and Staff'
+
+commented out private_place and url path
+added @login_required to all views
