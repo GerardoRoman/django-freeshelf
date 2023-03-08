@@ -23,3 +23,6 @@ OUR ADMIN SITE STILL ISNT WORKING!!!!
 PROBLEMS: 'django.contrib.admin' in admin.py; 'django.urls.include' in urls.py
 
 added def__str__ to Resource in models.py; added first sample resource through site
+
+added 'registration' to INSTALLED_APPS in settings
+installed django-registration-redux
