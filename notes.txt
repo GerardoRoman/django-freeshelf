@@ -13,3 +13,4 @@ Is this pushed to the branch? -> I don't think so.
 ==================================================
 
 added another MEDIA_TYPE in models.py and migrated
+added media_type to fields in forms.py
