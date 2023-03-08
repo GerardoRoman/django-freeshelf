@@ -24,4 +24,6 @@ urlpatterns = [
     path('resources/<int:pk>/edit', views.edit_resource, name='edit_resource'),
     path('resources/<int:pk>/remove',
          views.delete_resource, name='delete_resource'),
+    path('accounts/', include('registration.backends.simple.urls')),
+    # gives login pages
 ]

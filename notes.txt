@@ -26,3 +26,7 @@ added def__str__ to Resource in models.py; added first sample resource through s
 
 added 'registration' to INSTALLED_APPS in settings
 installed django-registration-redux
+
+added LOGIN_REDIRECT_URL = '/' to settings.py
+
+added path('accounts/', include('registration.backends.simple.urls')),
