@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Resource
 from .forms import ResourceForm
+from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 
 
 def list_resources(request):
@@ -35,3 +37,8 @@ def delete_resource(request, pk):
         resource.delete()
         return redirect('home')
     return render(request, 'resources/delete_resource.html')
+
+
+@login_required
+def private_place(request):
+    return HttpResponse("Shhh, members only!", content_type="text/plain")

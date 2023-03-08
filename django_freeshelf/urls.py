@@ -26,4 +26,6 @@ urlpatterns = [
          views.delete_resource, name='delete_resource'),
     path('accounts/', include('registration.backends.simple.urls')),
     # gives login pages
+    path('private_place', views.private_place),
+    # https://realpython.com/django-view-authorization/#restricting-views-to-logged-in-users
 ]

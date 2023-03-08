@@ -30,3 +30,7 @@ installed django-registration-redux
 added LOGIN_REDIRECT_URL = '/' to settings.py
 
 added path('accounts/', include('registration.backends.simple.urls')),
+
+GOING THROUGH LOGIN TUTORIAL
+https://realpython.com/django-view-authorization/#restricting-views-to-logged-in-users
+--got 'Shh, members only!' to show up
