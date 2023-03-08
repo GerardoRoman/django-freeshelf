@@ -34,3 +34,4 @@ added path('accounts/', include('registration.backends.simple.urls')),
 GOING THROUGH LOGIN TUTORIAL
 https://realpython.com/django-view-authorization/#restricting-views-to-logged-in-users
 --got 'Shh, members only!' to show up
+--finished up to 'Restricting Views to Admin and Staff'
