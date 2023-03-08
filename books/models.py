@@ -14,10 +14,11 @@ class User(AbstractUser):
 
 class Resource(models.Model):
     MEDIA_TYPES = (
-        ('book', 'book'),
-        ('website', 'website'),
-        ('video', 'video'),
-        ('other', 'other')
+        ('article', 'Article'),
+        ('book', 'Book'),
+        ('website', 'Website'),
+        ('video', 'Video'),
+        ('other', 'Other'),
         # (what's in DB, what user sees)
     )
 

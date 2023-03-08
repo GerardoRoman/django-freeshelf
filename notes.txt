@@ -6,3 +6,10 @@ We have NOT done makemigrations or migrate yet. As of creating resource Model
 created resource model; created 3 views, but did not write them; created forms.py and copied over from django-albums;
 
 worked on views functions and html pages with Gerardo in class
+
+==============================================
+Made superuser: SuperUser, password = password
+Is this pushed to the branch? -> I don't think so.
+==================================================
+
+added another MEDIA_TYPE in models.py and migrated
