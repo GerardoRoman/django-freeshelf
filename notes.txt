@@ -18,3 +18,8 @@ added media_type to fields in forms.py
 removed date_added from fields in forms.py
 added from .forms import ResourceForm in views.py; also fixed a typo
 started delete_resource.html and edit_resource.html
+
+OUR ADMIN SITE STILL ISNT WORKING!!!!
+PROBLEMS: 'django.contrib.admin' in admin.py; 'django.urls.include' in urls.py
+
+added def__str__ to Resource in models.py; added first sample resource through site
