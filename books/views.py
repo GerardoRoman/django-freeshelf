@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Resource
+from .forms import ResourceForm
 
 
 def list_resources(request):
@@ -14,7 +15,7 @@ def add_resource(request):
             new_resource.save()
             return redirect('home')
     form = ResourceForm()
-    return render(request, 'resources/add_resource.html', {'form: form'})
+    return render(request, 'resources/add_resource.html', {'form': form})
 
 
 def edit_resource(request, pk):

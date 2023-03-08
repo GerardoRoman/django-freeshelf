@@ -14,10 +14,11 @@ class User(AbstractUser):
 
 class Resource(models.Model):
     MEDIA_TYPES = (
-        ('book', 'book'),
-        ('website', 'website'),
-        ('video', 'video'),
-        ('other', 'other')
+        ('article', 'Article'),
+        ('book', 'Book'),
+        ('website', 'Website'),
+        ('video', 'Video'),
+        ('other', 'Other'),
         # (what's in DB, what user sees)
     )
 
@@ -27,3 +28,6 @@ class Resource(models.Model):
     media_type = models.CharField(choices=MEDIA_TYPES, max_length=50)
     url = models.URLField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'{self.title} // {self.media_type}'
