@@ -40,3 +40,6 @@ commented out private_place and url path
 added @login_required to all views
 
 TEST FOR BRANCH
+
+commented out 'from django.http import HttpResponse' in views.py
+tried adding a header with link to login to base.html -- not working
