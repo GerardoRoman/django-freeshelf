@@ -38,3 +38,5 @@ https://realpython.com/django-view-authorization/#restricting-views-to-logged-in
 
 commented out private_place and url path
 added @login_required to all views
+
+TEST FOR BRANCH
