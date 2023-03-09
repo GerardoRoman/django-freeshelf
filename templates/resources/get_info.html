@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    GET_INFO.HTML
+{% endblock %}
+
+{% block content %}
+    <h2>More Info</h2>
+    <h3>Title: {{ resource.title }}</h3>
+    <h3>Author: {{ resource.author }}</h3>
+    <h3>Media Type: {{ resource.media_type }}</h3>
+    <h3>Description: {{ resource.description }}</h3>
+{% endblock %}

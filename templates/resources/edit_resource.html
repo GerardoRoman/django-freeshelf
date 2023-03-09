@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    EDIT_RESOURCE.HTML
+{% endblock %}
+
 {% block content %}
-<h1>Edit Resource</h1>
+<h2>Edit Resource</h2>
 <form method='POST'>
     {% csrf_token %}
     {{ form.as_p }}

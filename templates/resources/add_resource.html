@@ -1,7 +1,11 @@
 {% extends 'base.html' %}
 
+{% block title %}
+    ADD_RESOURCE.HTML
+{% endblock %}
+
 {% block content %}
-<h1>Add a New Resource</h1>
+<h2>Add a New Resource</h2>
 <form method='POST'>
     {% csrf_token %}
     {{ form.as_p }}

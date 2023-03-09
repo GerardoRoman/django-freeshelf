@@ -38,3 +38,23 @@ https://realpython.com/django-view-authorization/#restricting-views-to-logged-in
 
 commented out private_place and url path
 added @login_required to all views
+
+TEST FOR BRANCH
+
+commented out 'from django.http import HttpResponse' in views.py
+tried adding a header with link to login to base.html -- not working
+
+added {% block title %} to each html page
+
+added header with links to login, logout and register to base.html
+imported user_passes_test in views.py
+
+moved homepage link to footer in base.html
+
+added h1 to header in base.html
+changed h1s to h2s in all other html files
+
+created get_info view and url path
+created get_info.html
+
+indicated where we need to add @user_passes_test(lambda user: user.is_staff) in views
