@@ -53,3 +53,6 @@ moved homepage link to footer in base.html
 
 added h1 to header in base.html
 changed h1s to h2s in all other html files
+
+created get_info view and url path
+created get_info.html

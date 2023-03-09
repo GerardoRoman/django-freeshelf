@@ -20,6 +20,7 @@ from books import views
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('', views.list_resources, name='home'),
+    path('resources/<int:pk>', views.get_info, name='get_info'),
     path('resources/new', views.add_resource, name='add_resource'),
     path('resources/<int:pk>/edit', views.edit_resource, name='edit_resource'),
     path('resources/<int:pk>/remove',

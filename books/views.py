@@ -12,6 +12,12 @@ def list_resources(request):
 
 
 @login_required
+def get_info(request, pk):
+    resource = get_object_or_404(Resource, pk=pk)
+    return render(request, 'resources/get_info.html', {'resource': resource})
+
+
+@login_required
 def add_resource(request):
     if request.method == 'POST':
         new_resource = ResourceForm(request.POST)

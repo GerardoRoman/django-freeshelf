@@ -7,7 +7,7 @@
 {% block content %}
     <h2>Coding Resources</h2>
     {% for resource in resources %}
-        <p>{{ resource }}</p>
+        <p><a href='{% url 'get_info' resource.pk %}'>{{ resource }}</a></p>
     {% endfor %}
     <a href='{% url 'add_resource' %}'>Add New Resource</a>
 {% endblock %}
