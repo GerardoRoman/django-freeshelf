@@ -17,7 +17,7 @@ def get_info(request, pk):
     return render(request, 'resources/get_info.html', {'resource': resource})
 
 
-@login_required
+# @user_passes_test(lambda user: user.is_staff)
 def add_resource(request):
     if request.method == 'POST':
         new_resource = ResourceForm(request.POST)
@@ -28,7 +28,7 @@ def add_resource(request):
     return render(request, 'resources/add_resource.html', {'form': form})
 
 
-@login_required
+# @user_passes_test(lambda user: user.is_staff)
 def edit_resource(request, pk):
     resource = get_object_or_404(Resource, pk=pk)
     if request.method == 'POST':
@@ -40,8 +40,7 @@ def edit_resource(request, pk):
     return render(request, 'resources/edit_resource.html', {'form': form, 'pk': pk})
 
 
-# @ user_passes_test(lambda user: user.is_staff)
-@login_required
+# @user_passes_test(lambda user: user.is_staff)
 def delete_resource(request, pk):
     resource = get_object_or_404(Resource, pk=pk)
     if request.method == 'POST':

@@ -56,3 +56,5 @@ changed h1s to h2s in all other html files
 
 created get_info view and url path
 created get_info.html
+
+indicated where we need to add @user_passes_test(lambda user: user.is_staff) in views
