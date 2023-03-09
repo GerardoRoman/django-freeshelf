@@ -29,9 +29,16 @@ class Resource(models.Model):
     media_type = models.CharField(choices=MEDIA_TYPES, max_length=50)
     url = models.URLField(max_length=200)
     date_added = models.DateTimeField(auto_now_add=True)
+    category = models.ForeignKey(
+        to="Category", on_delete=models.CASCADE, blank=True, null=True)
 
-    def __str__(self):
-        return f'{self.title} // {self.media_type}'
+
+class Meta:
+    verbose_name_plural = "Resources"
+
+
+def __str__(self):
+    return f'{self.title} // {self.media_type}'
 
 
 class Category(models.Model):
@@ -49,5 +56,5 @@ class Category(models.Model):
             self.slug = slugify(self.title)
         return super().save(*args, **kwargs)
 
-    # def get_absolute_url(self):
-    #     return reverse()
+    def get_absolute_url(self):
+        return reverse("category_detail", kwargs={"slug": self.slug})
