@@ -48,3 +48,5 @@ added {% block title %} to each html page
 
 added header with links to login, logout and register to base.html
 imported user_passes_test in views.py
+
+moved homepage link to footer in base.html
