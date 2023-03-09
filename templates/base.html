@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% comment %} <title>Resources</title> {% endcomment %}
     <title>
         {% block title %}
         {% endblock %}
@@ -12,8 +11,10 @@
 </head>
 <body>
     <header>
-        {% comment %} <a href="{% url 'accounts/login' %}">Login</a> {% endcomment %}
-        <h3>HEADER</h3>
+        <a href="/accounts/register">Register</a>
+        <a href="/accounts/login">Login</a>
+        <a href="/accounts/logout">Logout</a>
+        {% comment %} Need the / at the beginning {% endcomment %}
     </header>
     {% block content %}
     {% endblock %}

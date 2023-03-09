@@ -45,3 +45,6 @@ commented out 'from django.http import HttpResponse' in views.py
 tried adding a header with link to login to base.html -- not working
 
 added {% block title %} to each html page
+
+added header with links to login, logout and register to base.html
+imported user_passes_test in views.py

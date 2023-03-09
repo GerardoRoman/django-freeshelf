@@ -1,13 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import Resource
 from .forms import ResourceForm
-from django.contrib.auth.decorators import login_required
-# from django.http import HttpResponse
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 
 @login_required
 def list_resources(request):
     resources = Resource.objects.all()
+    # add .orderby('date_added') ???
     return render(request, 'resources/index.html', {'resources': resources})
 
 
@@ -34,6 +34,7 @@ def edit_resource(request, pk):
     return render(request, 'resources/edit_resource.html', {'form': form, 'pk': pk})
 
 
+# @ user_passes_test(lambda user: user.is_staff)
 @login_required
 def delete_resource(request, pk):
     resource = get_object_or_404(Resource, pk=pk)
@@ -41,8 +42,3 @@ def delete_resource(request, pk):
         resource.delete()
         return redirect('home')
     return render(request, 'resources/delete_resource.html')
-
-
-# @login_required
-# def private_place(request):
-#     return HttpResponse("Shhh, members only!", content_type="text/plain")
